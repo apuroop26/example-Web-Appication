@@ -1,11 +1,29 @@
-
-defaultNote:
-  title: 'The default note'
-  text: 'This is the default note for the demo application'
-
-assets:
-  overrides:
-    /: ../frontend/
-
 server:
-  rootPath: '/api/*'
+  rootPath: /api/*
+  applicationContextPath: /
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+allowedOrigins:
+    - "*"
+
+template: Hello, %s!
+defaultName: Stranger
+
+#database name
+database:
+
+# the name of your JDBC driver
+  driverClass: org.h2.Driver
+
+  # the username
+  user: sa
+
+  # the password
+  password:
+
+  #JDBC URL
+ url: jdbc:h2:./target/filter-db
+
+
