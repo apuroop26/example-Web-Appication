@@ -21,9 +21,6 @@ import java.util.EnumSet;
 
 public class DemoApplication extends Application<DemoConfiguration> {
 
-
-
-
     public static void main(String[] args) throws Exception {
         new DemoApplication().run(args);
     }
